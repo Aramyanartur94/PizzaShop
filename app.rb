@@ -19,3 +19,8 @@ end
 get '/about' do
 	erb :about
 end
+
+get '/products/:id' do
+	@product = Product.find(params[:id])
+	erb :product
+end

@@ -22,3 +22,7 @@ get '/products/:id' do
 	@product = Product.find(params[:id])
 	erb :product
 end
+
+post '/cart' do
+	erb 'cart'
+end

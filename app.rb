@@ -24,5 +24,5 @@ get '/products/:id' do
 end
 
 post '/cart' do
-	erb 'cart'
+	erb :cart
 end

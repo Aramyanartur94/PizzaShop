@@ -38,8 +38,8 @@ post '/cart' do
 end
 
 post '/place_order' do
-
-	p = Order.create params[:order]
+	@order = Order.create params[:order]
+	erb :order_placed
 end
 
 def parse_orders_input orders_input

@@ -33,8 +33,13 @@ post '/cart' do
 	@items.each do |item|
 		item[0] = Product.find(item[0])
 	end
-
+	
 	erb :cart
+end
+
+post '/place_order' do
+
+	p = Order.create params[:order]
 end
 
 def parse_orders_input orders_input

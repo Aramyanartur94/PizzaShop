@@ -1,0 +1,24 @@
+<h2> Orders: </h2>
+
+<table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>№</th>
+          <th>Order</th>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Address</th>
+        </tr>
+      </thead>
+      <tbody>
+      	<% @my_orders.reverse.each do |o| %>
+	        <tr>
+	          <th scope="row"><%= o.id %></th>
+	          <td><%= o.orders_input %></td>
+	          <td><%= o.name %></td>
+	          <td><%= o.phone %></td>
+	          <td><%= o.address %></td>
+	        </tr>
+        <% end %>
+      </tbody>
+</table>

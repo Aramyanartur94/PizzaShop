@@ -26,6 +26,11 @@ get '/products/:id' do
 	erb :product
 end
 
+get '/admin' do
+	@my_orders = Order.all   
+	erb :admin
+end
+
 post '/cart' do
 	#Получаем список параметров и разбираем(parse) их
 	@orders_input = params[:orders]
